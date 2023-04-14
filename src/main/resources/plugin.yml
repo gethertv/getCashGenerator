@@ -1,0 +1,9 @@
+name: GetCashGenerator
+version: '${project.version}'
+main: me.gethertv.getcashgenerator.GetCashGenerator
+api-version: 1.16
+softdepend: [PlaceholderAPI, Multiverse-Core]
+depend: [DecentHolograms, Vault]
+commands:
+  getcashgenerator:
+    aliases: [gcash, getgenerator]

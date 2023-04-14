@@ -1,0 +1,68 @@
+# getgeneratorcash.admin - komendy admina
+# getcashgenerator.break - pozwala na rozwalanie wszystkich generatorow
+mysql:
+  host: localhost
+  username: root
+  password: ""
+  database: database
+  port: 3306
+  ssl: false
+
+generators:
+  '1':
+    id: generator1
+    # czy ma sie otrzymac kasy przy pomocy VAULT (pluginu)
+    enable: true
+    # ilosc pieniedzy ktora otrzymuje sie po uplynieciu czasu
+    earn: 1000
+    # czas w sekundach
+    time: 30
+    # wysokosc hologramu
+    height: 2
+    hologram:
+      - "&7[POZIOM 1] Generator"
+      - "&7"
+      - "&7{time}"
+    cmds:
+      - say Przykladowa komenda {player}
+    item:
+      material: ORANGE_STAINED_GLASS
+      displayname: "&c[POZIOM 1] Generator"
+      lore:
+        - "&7"
+        - "&7Postaw na &eziemie"
+        - "&7"
+        - "&7Otrzymasz: &f1000$"
+        - "&7Czas: &f30sek"
+        - "&7"
+  '2':
+    id: generator2
+    # czy ma sie otrzymac kasy przy pomocy VAULT (pluginu)
+    enable: true
+    # ilosc pieniedzy ktora otrzymuje sie po uplynieciu czasu
+    earn: 1000
+    # czas w sekundach
+    time: 15
+    # wysokosc hologramu
+    height: 2
+    hologram:
+      - "&7[POZIOM 2] Generator"
+      - "&7"
+      - "&7{time}"
+    cmds: []
+    item:
+      material: WHITE_STAINED_GLASS
+      displayname: "&c[POZIOM 2] Generator"
+      lore:
+        - "&7"
+        - "&7Postaw na &eziemie"
+        - "&7"
+        - "&7Otrzymasz: &f5000$"
+        - "&7Czas: &f15sek"
+        - "&7"
+
+
+lang:
+  success-create: "&aPomyslnie stworzono generator {generator}!"
+  success-take: "&aPomyslnie zebrano {generator}"
+  limit: "&cPrzekroczono twoj limit!"
